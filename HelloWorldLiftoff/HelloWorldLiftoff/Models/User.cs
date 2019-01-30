@@ -9,10 +9,12 @@ namespace HelloWorldLiftoff.Models
     {
         public string username { get; set; }  //protected
         public string password { get; set; }  //private
-        public int ID { get; set; }
+        public int UserID { get; set; }
         public int areaCode { get; set; }
 
-        public string Username
+        
+
+        /*public string Username
         {
             get { return username; }
             set { username = value; }
@@ -28,13 +30,15 @@ namespace HelloWorldLiftoff.Models
         {
             get { return areaCode; }
             set { areaCode = value; }
-        }
+        }*/
+
         //constructor (needed for when user registers)
         /*public User(string username, string password, int areaCode)
         {
             username = username;
             password = password;
             areaCode = areaCode;
+            
         }*/
     }
 }
