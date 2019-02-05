@@ -11,8 +11,10 @@ namespace HelloWorldLiftoff.Models
         public string password { get; set; }  //private
         public int UserID { get; set; }
         public int areaCode { get; set; }
+        public int sourceCode { get; set; }
+        //public List<TrackingSheet> trackingSheets { get; set; }
+        public IEnumerable<TrackingSheet> trackingSheets { get; set; }
 
-        
 
         /*public string Username
         {

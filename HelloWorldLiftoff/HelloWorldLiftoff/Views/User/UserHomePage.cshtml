@@ -1,0 +1,41 @@
+﻿@model HelloWorldLiftoff.Models.User
+
+<nav>
+    <a href="/logout">Logout</a> &nbsp; &nbsp;
+</nav>
+
+@{
+    <h1>Welcome, @Model.username!</h1>
+}
+
+<h3>Your area code: @Model.areaCode</h3>
+
+<!--so then here I'd like for one most recent current tracking sheet as well as a create new tracking
+    sheet icon to be here.-->
+
+<br />
+<br />
+
+<h3>Tracking sheet history: </h3>
+
+<table class="table">
+
+    
+    @foreach(var ts in Model.trackingSheets)
+    {
+        <tr>
+            Tracking Sheet under construction
+        </tr>
+    }
+</table>
+
+
+<!--<br />
+<br />
+
+@*@if (Model.trackingSheets.Count() == 0)
+{
+    <p>No viewed tracking sheets yet</p>
+}*@-->
+
+

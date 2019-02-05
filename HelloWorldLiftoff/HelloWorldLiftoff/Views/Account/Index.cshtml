@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+@model HelloWorldLiftoff.ViewModels.AccountViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using(Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        @ViewBag.Error
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>@Html.LabelFor(model => model.Account.username)</td>
+                <td>@Html.TextBoxFor(model => model.Account.username)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.Account.password)</td>
+                <td>@Html.PasswordFor(model => model.Account.password)</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Login" /></td>
+            </tr>
+        </table>
+    }
+</body>
+</html>

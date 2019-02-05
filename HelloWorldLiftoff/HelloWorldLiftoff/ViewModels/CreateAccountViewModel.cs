@@ -34,6 +34,10 @@ namespace HelloWorldLiftoff.ViewModels
         //okay, so here I would need all the zipcodes of all the united states...i don't know how to get all of those
         //coded here, but I do know this would probably call for an IEnumerable of zipcodes and then a SelectListItem
 
+        [Required]
+        [Display(Name = "Type in your source code. ")]
+        public int sourceCode { get; set; }
+
 
         public List<SelectListItem> Zipcodes { get; set; }
 

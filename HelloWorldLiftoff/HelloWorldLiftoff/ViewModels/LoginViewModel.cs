@@ -10,18 +10,21 @@ namespace HelloWorldLiftoff.ViewModels
 {
     public class LoginViewModel
     {
+        //[Required(ErrorMessage = "You must type in a username")]
         [Required]
         [Display(Name = "Username")]
         public string Username { get; set; }
 
 
-        [Required(ErrorMessage = "Password needs to be minimum 3 characters long.")]
+        //[Required(ErrorMessage = "Wrong password.")]
+        [Required(ErrorMessage = "Sorry, that's not the right password")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        public LoginViewModel()
+        /*public LoginViewModel()
         {
             //default constructor, right?
-        }
+        }*/
         
     }
 }

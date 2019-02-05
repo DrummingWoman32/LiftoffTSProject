@@ -1,38 +1,36 @@
-﻿<!--I might need to add some sort of ViewModel or sthg here...-->
-@model HelloWorldLiftoff.ViewModels.LoginViewModel
+﻿@model HelloWorldLiftoff.ViewModels.LoginViewModel
 
-<!--<h1>Welcome to BizTracker! Please log in.</h1>-->
 
 @{ 
-    <h1>Welcome to BizTracker! Please log in. </h1>
+    <h1>Welcome to BizTracker, the online tracking sheet app for business consultants!</h1>
+    
 }
+    <br />
+    <h4>Please log in if you're ready to go out into the field :)</h4>
+    <br />
 
-    <form asp-controller="Login" asp-action="Index" method="get">
+    <form asp-controller="User" asp-action="UserHomePage" method="post">
 
-        <div class="form-group">
-            <label asp-for="Username"></label>
-            <input class="form-control" asp-for="Username" />
-            <span asp-validation-for="Username"></span>
 
-            <!--<select asp-for="username" asp-items="Model.User"></select>
-        <input type="text" name="usernameID" value="" />
-        <span asp-validation-for="username"></span>-->
-        </div>
+            <div class="form-group">
+                <label asp-for="Username"></label>
+                <input class="form-control" asp-for="Username" />
+                <span asp-validation-for="Username"></span>
+            </div>
 
-        <div class="form-group">
-            <label asp-for="Password"></label>
-            <input class="form-control" asp-for="Password" />
-            <span asp-validation-for="Password"></span>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input class="form-control" asp-for="Password" />
+                <span asp-validation-for="Password"></span>
 
-            <!--<select asp-for="password" asp-items="Model.User"></select>
-        <input type="text" name="password" value="" />
-        <span asp-validation-for="password"></span>-->
-        </div>
+            </div>
 
-        <input type="submit" value="Log In" />
-        <!--<input type="submit" value="Create Account" />-->
+            <input type="submit" value="I'm ready!" />
+          
 
-        <br />
-        <p><a asp-controller="User" asp-action="CreateAccount">New? Create an account!</a></p>
 
-    </form>
+            <br />
+            <br />
+            <p><a asp-controller="User" asp-action="CreateAccount">New? Create an account!</a></p>
+
+        </form>
